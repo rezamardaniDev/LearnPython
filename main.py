@@ -1,10 +1,10 @@
-class DataBase:
-    def __init__(self, name, number) -> None:
-        self.name = name
-        self.number = number
+class Car:
+    def __init__(self, color, model) -> None:
+        self.color = color
+        self.model = model
 
-    def __str__(self) -> str:
-        return f"{self.name} : {self.number}"
-    
-p1 = DataBase("ali", 45788)
-print(p1)
+    def pritnter(self):
+        print(f"{self.color} : {self.model}")
+
+car1 = Car("red", "bmw")
+car1.pritnter()
