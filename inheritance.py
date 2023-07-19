@@ -24,6 +24,8 @@ class Teacher(Person):
 
     def working_ifno(self):
         return f"i work in {self.uni} at {self.departmanet}"
+    
+
 s1 = Student("ali", "zare", "computer", "fasa")
 print(s1.fullname())
 
