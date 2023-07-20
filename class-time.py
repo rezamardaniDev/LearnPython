@@ -15,6 +15,21 @@ class Time:
 
     def __str__(self) -> str:
         return f"{self.hours:02}:{self.minutes:02}:{self.seconds:02}"
+    
+    def __add__(self, other):
+        hours = self.hours + other.hours
+        minutes = self.minutes + other.minutes
+        seconds = self.seconds + other.seconds
+        return Time(hours%24, minutes%60, seconds%60)
+    
+    def __gt__(self, other):
+        return (self.hours > other.hours) \
+        or (self.hours == other.hours and self.minutes > other.minutes) \
+        or (self.hours == other.hours and self.minutes == other.minutes and self.seconds > other.seconds)
+    
+    def __eq__(self,other) -> bool:
+        return (id(self) != id(other) and (self.hours == other.hours and self.minutes == other.minutes and self.seconds == other.seconds))
 
-time1= Time(17,80, 42)
-print(time1)
+time1= Time(1,1, 10)
+time2= Time(1,1, 1)
+print(time1 == time2)
