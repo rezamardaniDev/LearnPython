@@ -1,5 +1,3 @@
-import os
-os.system("cls")
 class BankAccount:
     def __init__(self, name:str, balance:int=0) -> None:
         self.name = name
