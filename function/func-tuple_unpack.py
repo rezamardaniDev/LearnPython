@@ -5,3 +5,7 @@ def calc_sum_sub(num1, num2) -> int:
     return (sum_result, sub_result)
 
 print(calc_sum_sub(10, 5))
+(a, b) = calc_sum_sub(10, 5)
+
+print(a)
+print(b)
